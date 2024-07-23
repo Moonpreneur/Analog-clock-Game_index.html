@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Analog_clock.js"></script>
+    <script src="Game.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="logo">
+        <img src="website-logo.png" alt="website-logo">
+    </div>
+    
+    <div id="title-bar"></div>
+    <h1>Clock Game</h1>
+    
+    <div class="button-container">
+        <button id="how_to_play">HOW TO PLAY</button>
+    </div>
+    
+    <div id="instructions" style="display: none;">
+        <h2>How to Play</h2>
+        <p>
+            &bull;You will be presented with a clock showing a random time.<br> 
+            &bull;Your mission is to correctly guess the time displayed on the clock.
+        </p>
+        
+        <p id="good_luck_text" style="text-align: center; font-weight: bold;">GOOD LUCK!</p>
+    </div>
+    
+    <div id="game" style="display: none;">
+        <div id="questions-container" style="margin: 22px; padding: 10px; background-color: #fff; border-radius: 10px; text-align: center;">
+        <div class="game-container">
+           
+            <div class="clock-container">
+                <canvas id="analog_clock_canvas"></canvas>
+            </div>
+            <div class="info-container">
+                <h5 id="correct_answers">Correct answers: <span id="correct_count">0</span></h5>
+                <div class="input-container">
+                    <input type="text" id="student" placeholder="Type your guess below (hhmmss )" pattern="[1-12]:[0-59]" style="width: 310px; height: 30px;" disabled>
+                    <button id="check_answer" type="submit" disabled>Check Answer</button>
+                </div>
+                </div>
+                <p id="grade"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="result" style="text-align: center; font-weight: bold; font-size: 18px;"></div>
+    <div id="timeremaining" class="container" style="display: none;">
+        Time remaining: <span id="timeremainingvalue">60</span> sec
+    </div>
+    <div id="gameOver" style="display: none;">
+        Game Over! Your score is: <span id="score"></span>
+    </div>
+    
+    <div class="button-container">
+        <button id="play_again">PLAY</button>
+    </div>
+
+    <!-- Game Over Sound -->
+    <audio id="gameover-sound" src="gameover.mp3"></audio>
+    <!-- Correct Answer Sound -->
+    <audio id="correct-sound" src="the-correct-answer-33-183620.mp3"></audio>
+    <!-- Incorrect Answer Sound -->
+    <audio id="incorrect-sound" src="buzzer-or-wrong-answer-20582 (2).mp3"></audio>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
